@@ -1,0 +1,49 @@
+/* Reset / Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Splash Container */
+.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+
+  padding: 20px;
+  background: #ffffff; /* change if needed */
+}
+
+/* Logo Styling */
+.logo {
+  width: 100%;
+  max-width: 280px; /* controls desktop size */
+  height: auto;
+
+  /* Optional: smooth scaling */
+  object-fit: contain;
+}
+
+/* Responsive Tweaks */
+@media (min-width: 768px) {
+  .logo {
+    max-width: 360px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    max-width: 420px;
+  }
+}
