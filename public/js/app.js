@@ -25,7 +25,7 @@
   const STATUS_ORDER = { fail: 0, warn: 1, pass: 2, skipped: 3 }; // worst first
 
   // ---------- Call to action settings ----------
-  const CTA_URL = 'https://arteaga.com/contact-us';
+  const CTA_URL = 'https://www.arteaga.com/contact-us';
   const CTA_BUTTON = 'Talk to our team';
 
   let report = null; // the last audit result
