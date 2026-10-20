@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Visibility Audit | Arteaga &amp; Arteaga</title>
+  <meta name="description" content="Check how well your website is prepared for search engines and AI assistants. Free SEO, AEO and GEO audit.">
+  <meta name="theme-color" content="#df1683">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23df1683'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- LOGO: replace /public/img/logo.svg with your own file.
+           If your logo is a PNG or has another name, just change the src below. -->
+      <a class="logo" href="https://arteaga.com">
+        <img src="/img/logo.png" width="180" height="48" alt="Arteaga &amp; Arteaga">
+      </a>
+      <a class="header-link" href="https://arteaga.com">Back to arteaga.com</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">SEO &middot; AEO &middot; GEO</p>
+        <h1>How visible is your website to search and AI?</h1>
+        <p class="lead">
+          Enter a page address and we will check how well it is prepared for search engines,
+          answer engines and AI assistants like ChatGPT, Claude, Perplexity and Gemini.
+        </p>
+
+        <form id="audit-form" class="audit-form" novalidate>
+          <label for="url" class="visually-hidden">Website address</label>
+          <input id="url" name="url" type="text" inputmode="url" autocomplete="url"
+                 autocapitalize="off" spellcheck="false" placeholder="arteaga.com" required>
+          <button id="submit" class="btn btn-primary" type="submit">Run audit</button>
+        </form>
+        <p id="form-error" class="form-error" role="alert" hidden></p>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+
+        <!-- Fallback for sites that block automated visitors (e.g. Cloudflare).
+             It opens by itself when the normal audit is refused. -->
+        <details id="paste-panel" class="paste-panel">
+          <summary>Site blocking the audit? Paste your page's HTML instead</summary>
+          <div class="paste-body">
+            <p>
+              Some websites, for example those behind Cloudflare protection, refuse automated
+              visitors. You can paste the page source here and we will audit it directly.
+            </p>
+            <ol>
+              <li>Open your page in the browser.</li>
+              <li>Right-click and choose <strong>View page source</strong> (or press Ctrl+U, Cmd+Option+U on Mac).</li>
+              <li>Select everything, copy it and paste it below.</li>
+            </ol>
+            <label for="html">Page HTML</label>
+            <textarea id="html" rows="8" spellcheck="false" placeholder="&lt;!doctype html&gt;..."></textarea>
+            <p class="hint">
+              Tip: also type the page address in the box above. It lets us check links, robots.txt and
+              the sitemap. Your HTML is analyzed once and is not stored.
+            </p>
+            <button id="submit-html" class="btn btn-primary" type="button">Audit pasted HTML</button>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="results" class="results" aria-labelledby="results-title" hidden>
+      <div class="container">
+        <div class="results-head">
+          <div>
+            <h2 id="results-title" tabindex="-1">Audit results</h2>
+            <p id="results-meta" class="muted"></p>
+          </div>
+          <div class="actions" role="group" aria-label="Download results">
+            <button type="button" class="btn btn-outline" id="download-json">Download JSON</button>
+            <button type="button" class="btn btn-outline" id="download-csv">Download CSV</button>
+            <button type="button" class="btn btn-outline" id="print">Save as PDF</button>
+          </div>
+        </div>
+
+        <p id="results-note" class="notice" hidden></p>
+
+        <div id="summary" class="summary"></div>
+
+        <div id="filters" class="filters" role="group" aria-label="Filter results"></div>
+        <div id="details"></div>
+
+        <p class="disclaimer">
+          This audit runs automated checks on one page. It is a starting point, not a guarantee of
+          rankings or of being cited by AI tools.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Arteaga &amp; Arteaga</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="48" viewBox="0 0 180 48" role="img" aria-label="Logo placeholder">
+  <rect x="1" y="1" width="178" height="46" rx="8" fill="#fdeaf4" stroke="#df1683" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="90" y="21" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#b30f69">YOUR LOGO HERE</text>
+  <text x="90" y="37" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#b30f69">replace public/img/logo.svg</text>
+</svg>

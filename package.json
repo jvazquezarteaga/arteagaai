@@ -1,0 +1,16 @@
+{
+  "name": "arteaga-audit",
+  "version": "1.0.0",
+  "description": "SEO, AEO and GEO (AI visibility) audit tool",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node dev-server.js",
+    "test": "node test/run-checks.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}
